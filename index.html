@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color-picker2</title>
+    <link  rel="stylesheet" href="style.css" >
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content">
+       <h1>SO COLD lyrics by BOYWITHUKE </h1>
+        <p> Lately my ambitions don't
+            <br>
+            Faze me, birthday wishes, oh
+            <br>
+
+            Maybe we go fishing on Sunday, some day
+            <br>
+            Baby, you're omnipotent, like, daily I'm always open to
+            <br>
+            Waste me, waste myself, disillusioned
+            <br>
+            Don't give a fuck 'bout health
+            <br>
+
+            I'm by the fireworks, they set up at the pond
+            <br>
+            I see your tires work, I hiccup when you're gone
+            <br>
+            I get admirers, I set up with the con
+            <br>
+            I'm a retired clerk, I'm fed up with the song
+            <br>
+            I feel unhappy right now, when it's you getting lied to
+            <br>
+            I say to you now, I get gaslighted
+            <br>
+            I'm so like unhappy now, I don't know how to count
+            <br>
+            All my blessings of you, babe, I don't know
+            <br>
+            When I'm with you
+            <br>
+            I would rather choose a dare than a truth, that's what I'd do
+            <br>
+            You have no proof of what I could do
+            <br>
+            Would you like to run a mile with my shoes
+            <br>
+            Yeah, with my shoes, in my shoes
+            <br>
+            Why do I feel cold? Why do I feel cold?
+            <br>
+            When I'm underneath the sun
+            <br>
+            Why do I feel cold? Why do I feel cold?
+            <br>
+            When I'm underneath the sun
+            <br>
+            Why do I feel cold? Why do I feel cold?
+            <br>
+            When I'm underneath the sun
+            <br>
+        </p>
+  <div class="row">
+   <h3>Background:</h3>
+      <input type="color" id="bg" value="#FFFFFF">
+  </div>
+
+        <div class=row>
+            <h3>Text:</h3>
+            <input type="color" id="txt">
+        </div>
+       <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+     const content = document.querySelector('.content');
+     const bg = document.getElementById('bg');
+     const txt = document.getElementById('txt');
+
+     const clear = document.getElementById('clear');
+
+     bg.addEventListener('change', function(e){
+         content.style.backgroundColor = e.target.value;
+     });
+     txt.addEventListener('change', function (e){
+         content.style.color= e.target.value;
+     });
+
+     clear.addEventListener('click', function(e){
+         content.style.backgroundColor = 'white';
+         bg.value = '#FFFFFF'
+         content.style.color='black';
+         txt.value='#000000'
+     });
+</script>
+</body>
+</html>
